@@ -1,56 +1,63 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Nossa Equipe | TechNova</title>
-	</head>
-	<body>
-		<header>
-			<strong>TechNova</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
 
-		<main>
-			<section>
-				<h1>Nossa Equipe Técnica</h1>
-				<p>Conheça os profissionais que transformam requisitos de negócio em soluções de software seguras e escaláveis</p>
-				<ul>
-					<li>
-						<h2>Kayllanne Eduarda</h2>
-						<strong>Desenvolvedora de Software</strong>
-						<p>Gosta de tecnologia e atua no desenvolvimento de sistemas e soluções digitais, buscando transformar ideias em ferramentas úteis e práticas.</p>
-					</li>
-					<li>
-						<h2>Ketellyn Myrelly</h2>
-						<strong>Designer/Desenvolvedora Front-end</strong>
-						<p>Atua na criação visual de sites e sistemas, unindo criatividade e organização para oferecer uma experiência simples e agradável aos usuários.</p>
-					</li>
-					
-					<li>
-						<h2>Pedro Avelar</h2>
-						<strong>Analista de Projetos</strong>
-						<p>Responsável pelo planejamento e organização dos projetos, acompanhando tarefas e prazos para garantir o bom andamento do trabalho em equipe.</p>
-					</li>
-					<li>
-						<h2>Lucas Henrique</h2>
-						<strong>Desenvolvedor Back-end</strong>
-						<p>Responsável pela parte interna dos sistemas, trabalhando na organização dos dados, no funcionamento das funcionalidades e na segurança das aplicações.</p>
-					</li>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-				</ul>
-			</section>
-		</main>
+<LayoutBase
+  titulo="Nossa Equipe"
+  descricao={`Conheça os profissionais por trás da ${empresa.nome}.`}
+>
+  <section>
+    <h1>Nossa Equipe Técnica</h1>
 
-		<footer>
-			<p>&copy; 2026 TechNova. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+    <p>
+      Conheça os profissionais que transformam requisitos de negócio
+      em soluções de software seguras e escaláveis.
+    </p>
+
+    <ul>
+      <li>
+        <h2>Kayllanne Eduarda</h2>
+        <strong>Desenvolvedora de Software</strong>
+        <p>
+          Responsável por transformar ideias em soluções digitais.
+          Atua no desenvolvimento de sistemas, na criação de funcionalidades
+          e na busca por soluções tecnológicas que tornem as atividades
+          do dia a dia mais simples e práticas.
+        </p>
+      </li>
+
+      <li>
+        <h2>Ketellyn Myrelly</h2>
+        <strong>Designer e Desenvolvedora Front-end</strong>
+        <p>
+          Responsável pela parte visual e pela experiência dos usuários
+          nas plataformas da empresa. Trabalha na criação de interfaces
+          bonitas, organizadas e fáceis de utilizar, buscando unir
+          criatividade e funcionalidade.
+        </p>
+      </li>
+
+      <li>
+        <h2>Pedro Avelar</h2>
+        <strong>Analista de Projetos</strong>
+        <p>
+          Responsável por organizar e acompanhar os projetos da empresa.
+          Atua no planejamento de tarefas, na organização de prazos
+          e na comunicação da equipe.
+        </p>
+      </li>
+
+      <li>
+        <h2>Lucas Henrique</h2>
+        <strong>Desenvolvedor Back-end</strong>
+        <p>
+          Responsável pela parte interna dos sistemas, trabalhando
+          na organização dos dados, no funcionamento das funcionalidades
+          e na segurança das aplicações.
+        </p>
+      </li>
+    </ul>
+  </section>
+</LayoutBase>

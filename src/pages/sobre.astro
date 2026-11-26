@@ -1,61 +1,83 @@
-<<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | TechNova </title>
-	</head>
-	<body>
-		<header>
 
-			<strong> TechNova </strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Sobre a TechNova</h1>
-				<p>A TechNova é uma empresa de desenvolvimento de soluções digitais criada em 2026. Nascemos com o propósito de tornar a tecnologia mais próxima das pessoas, criando ferramentas que facilitem tarefas, estudos e compromissos do cotidiano.Acreditamos que uma boa tecnologia não precisa ser complicada. Ela deve resolver problemas, economizar tempo e tornar a vida mais prática. Por isso, buscamos desenvolver soluções modernas, acessíveis e fáceis de utilizar.</p>
-			</section>
+<LayoutBase
+  titulo="Sobre Nós"
+  descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+  <section>
+    <h1>Sobre a {empresa.nome}</h1>
 
-			<section>
-				<h2>Missão</h2>
-				<p>Transformar necessidades do cotidiano em soluções digitais simples, inteligentes e acessíveis, ajudando pessoas e instituições a organizar melhor suas atividades e aproveitar seu tempo.</p>
-			</section>
+    <p>
+      A TechNova foi criada em 2026 com o objetivo de utilizar a tecnologia
+      para tornar o dia a dia das pessoas mais simples, organizado e produtivo.
+      A empresa surgiu a partir da ideia de que a tecnologia não deve apenas
+      ser avançada, mas também útil e acessível para todos. Por isso, a
+      TechNova desenvolve soluções que podem ajudar em diferentes situações
+      do cotidiano, como organizar atividades e compromissos, auxiliar
+      estudantes e escolas na rotina de aprendizagem e facilitar tarefas
+      realizadas em casa. A empresa busca transformar problemas comuns em
+      soluções digitais práticas, inteligentes e fáceis de usar, ajudando
+      as pessoas a economizarem tempo e terem uma rotina mais organizada.
+    </p>
+  </section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>Ser uma empresa reconhecida pela criação de soluções tecnológicas inovadoras e acessíveis, contribuindo para um futuro em que a tecnologia facilite a vida de todos.</p>
-			</section>
+  <section>
+    <h2>Missão</h2>
+    <p>
+      Desenvolver soluções tecnológicas simples, acessíveis e úteis que
+      ajudem as pessoas a organizar suas atividades, facilitar os estudos,
+      administrar tarefas do dia a dia e aproveitar melhor o seu tempo.
+    </p>
+  </section>
 
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Inovação</h3>
-						<p>transformar ideias em soluções úteis.</p>
-					</li>
-					<li>
-						<h3>Simplicidade</h3>
-						<p>tornar a tecnologia fácil de utilizar.</p>
-					</li>
-					<li>
-						<h3>Compromisso</h3>
-						<p>trabalhar com dedicação e responsabilidade.</p>
-					</li>
-				</ul>
-			</section>
-		</main>
+  <section>
+    <h2>Visão</h2>
+    <p>
+      Tornar-se uma empresa reconhecida por criar tecnologias inovadoras
+      e fáceis de usar, contribuindo para uma rotina mais organizada,
+      prática e produtiva para pessoas, estudantes, famílias e instituições
+      de ensino.
+    </p>
+  </section>
 
-		<footer>
-			<p>&copy; 2026 TechNova. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+  <section>
+    <h2>Nossos Valores</h2>
+    <ul>
+      <li>
+        <h3>Simplicidade</h3>
+        <p>
+          Criar soluções fáceis de entender e utilizar,
+          sem complicar a rotina das pessoas.
+        </p>
+      </li>
+
+      <li>
+        <h3>Inovação</h3>
+        <p>
+          Buscar novas ideias e tecnologias para facilitar
+          as atividades do cotidiano.
+        </p>
+      </li>
+
+      <li>
+        <h3>Acessibilidade</h3>
+        <p>
+          Desenvolver ferramentas úteis e acessíveis
+          para diferentes pessoas.
+        </p>
+      </li>
+
+      <li>
+        <h3>Compromisso</h3>
+        <p>
+          Trabalhar com responsabilidade para oferecer
+          soluções que realmente ajudem os usuários.
+        </p>
+      </li>
+    </ul>
+  </section>
+</LayoutBase>

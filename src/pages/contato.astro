@@ -1,48 +1,45 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Fale Conosco | TechNova</title>
-	</head>
-	<body>
-		<header>
-			<strong>TechNova</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
 
-		<main>
-			<section>
-				<h1>Fale Conosco</h1>
-				<p>Deseja facilitar sua rotina com a tecnologia? Entre em contato a TechNova! Criamos soluções digitais para tornar seu dia a dia mais simples e organizado.</p>
-			</section>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-			<section>
-				<h2>Nossa Sede</h2>
-				<address>
-					Rua das Inovações, nº 250 <br />
-					Centro<br />
-					Piripiri, PI<br />
-					CEP: 64260-000
-				</address>
-			</section>
+<LayoutBase 
+  titulo="Fale Conosco" 
+  descricao={`Entre em contato com a ${empresa.nome}.`}
+>
+  <section>
+    <h1>Fale Conosco</h1>
+    <p>
+      Deseja facilitar sua rotina com a tecnologia?
+      Entre em contato com a {empresa.nome}!
+    </p>
+  </section>
 
-			<section>
-				<h2>Canais Digitais</h2>
-				<p><strong>E-mail:</strong> <a href="mailto:contato@technova.com.br">contato@technova.com.br</a></p>
-				<p><strong>Telefone:</strong> (86) 9940-9963</p>
-			</section>
-		</main>
+  <section>
+    <h2>Nossa Sede</h2>
+    <address>
+      Rua das Inovações, nº 250<br />
+      Próximo à Praça da Tecnologia<br />
+      Centro<br />
+      Piripiri - PI<br />
+      CEP: 64260-000
+    </address>
+  </section>
 
-		<footer>
-			<p>&copy; 2026 TechNova. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+  <section>
+    <h2>Canais Digitais</h2>
+    <p>
+      <strong>E-mail:</strong>
+      <a href="mailto:contato@technova.com.br">
+        contato@technova.com.br
+      </a>
+    </p>
+    <p>
+      <strong>Telefone:</strong>
+      <a href="tel:+5586999409963">
+        (86) 99940-9963
+      </a>
+    </p>
+  </section>
+</LayoutBase>

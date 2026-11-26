@@ -61,7 +61,8 @@ export const empresa = {
       foto: "/images/amy.jpg",
       alt: "Foto de Lucas Henrique",
       descricao: "Responsável pela parte interna dos sistemas, trabalhando na organização dos dados, no funcionamento das funcionalidades e na segurança das aplicações."
-    }, 
+    }
+  ]
+};
      
     
-};

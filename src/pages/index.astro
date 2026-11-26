@@ -1,38 +1,20 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Início | TechNova </title>
-	</head>
-	<body>
-		<header>
-			<strong>Tech Nova</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1> Inovação que transforma ideias em tecnologia .</h1>
-				<p>Desenvolver soluções tecnológicas simples, acessíveis e úteis que ajudem as pessoas a organizar suas atividades, facilitar os estudos, administrar tarefas do dia a dia e aproveitar melhor o seu tempo.</p>
-				<a href="/contato">Fale Conosco</a>
-			</section>
+<LayoutBase 
+	titulo="Início" 
+	descricao={`Bem-vindo à ${empresa.nome}. ${empresa.slogan}`}
+>
+	<section>
+		<h1>{empresa.slogan}</h1>
+		<p>{empresa.missao}</p>
+		<a href="/contato">Fale Conosco</a>
+	</section>
 
-			<section>
-				<h2>Quem Atendemos</h2>
-				<p>A TechNova tem como público-alvo estudantes, famílias, professores, escolas e pessoas que buscam organizar melhor sua rotina. As soluções da empresa são voltadas para quem deseja facilitar atividades do dia a dia, como organizar tarefas, compromissos e estudos, acompanhar prazos e economizar tempo por meio da tecnologia. </p>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 Tech TechNova. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Quem Atendemos</h2>
+		<p>{empresa.publicoAlvo}</p>
+	</section>
+</LayoutBase>
